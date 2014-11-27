@@ -1,18 +1,17 @@
 language: cpp
 
 before_script:
-  - sudo apt-get install libprotobuf-dev protobuf-compiler valgrind
-  - wget http://pwaller.net/miniboost-bin.tar.bz2
-  - tar xf miniboost-bin.tar.bz2
+    - sudo apt-get install libprotobuf-dev protobuf-compiler valgrind libboost-all-dev libsnappy-dev libboost-chrono-dev
   
 script:
-  - ./waf go
-  - ./waf install --checkall --valgrind
+    - ./waf go
+    - ./waf install --checkall --valgrind
 
 notifications:
   email:
     recipients:
       - peter.waller@cern.ch
       - ebke@cern.ch
+      - andrew.malone.melo@cern.ch
     on_success: change
     on_failure: always
