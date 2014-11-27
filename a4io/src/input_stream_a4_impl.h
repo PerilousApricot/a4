@@ -17,6 +17,8 @@
 
 #include <boost/thread.hpp>
 #include <boost/thread/locks.hpp>
+#include <google/protobuf/io/coded_stream.h>
+
 typedef boost::unique_lock<boost::mutex> Lock;
 
 const uint32_t HIGH_BIT = 1 << 31;

@@ -5,6 +5,8 @@
 
 #include <a4/io/A4Stream.pb.h>
 
+#include <google/protobuf/io/coded_stream.h>
+
 namespace a4 {
 namespace io {
 

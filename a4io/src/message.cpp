@@ -3,6 +3,7 @@
 #include <google/protobuf/message.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/dynamic_message.h>
+#include <google/protobuf/io/coded_stream.h>
 
 #include <a4/message.h>
 
@@ -367,6 +368,7 @@ namespace a4{ namespace io{
                     FATAL("MERGE_UNION on non-repeated field");
             case MERGE_BLOCK_IF_DIFFERENT:
                 break;
+            case MERGE_AND:
             case MERGE_ADD:
             case MERGE_MULTIPLY:
             case MERGE_APPEND:

@@ -143,7 +143,7 @@ bool InputStreamA4Impl::read_header(bool discovery_requested)
         if (!_coded_in->ReadLittleEndian32(&message_type))
             return set_error();
     }
-    if (!message_type == _fixed_class_id<StreamHeader>())
+    if (!(message_type == _fixed_class_id<StreamHeader>()))
         return set_error();
 
     StreamHeader h;

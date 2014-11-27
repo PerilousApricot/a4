@@ -2,6 +2,7 @@
 using boost::bind;
 
 #include "proto_class_pool.h"
+#include <google/protobuf/io/coded_stream.h>
 
 using google::protobuf::Descriptor;
 using google::protobuf::DescriptorPool;
